@@ -2,7 +2,7 @@
 
 A compact focus timer for [Blinko](https://blinko.space). It supports focus and break sessions, named countdown presets, resizing, minimizing, and an optional completion chime.
 
-The App requests no network, note, notification, background-job, or database permissions. Its local interval exists only while the visible timer is running.
+The App requests only installation-scoped state read/write access for timer settings and custom presets. It requests no network, note, notification, or background-job permissions. Its local interval exists only while the visible timer is running.
 
 ## Development
 
@@ -27,7 +27,7 @@ npm run pack
 
 ## Project map
 
-- `blinko.app.json` declares the toolbar contribution and permission-free custom view.
+- `blinko.app.json` declares the toolbar contribution and App-state permissions used by the custom view.
 - `ui/timer.html` contains the signed, self-contained timer UI.
 - `src/index.ts` contains the minimal App lifecycle entry.
 - `locales/` contains marketplace and toolbar copy.
