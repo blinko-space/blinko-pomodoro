@@ -1,0 +1,19 @@
+{
+  "appId": "cloud.blinko.pomodoro",
+  "version": "0.2.0",
+  "minRuntimeApi": "1.0.0",
+  "source": { "repository": "https://github.com/blinko-space/blinko-pomodoro", "revision": "0000000000000000000000000000000000000000" },
+  "license": "MIT",
+  "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "listing": { "nameKey": "app.name", "summaryKey": "app.summary", "descriptionKey": "app.description" },
+  "targets": { "web": { "entry": "src/index.ts", "minHostVersion": "1.0.0", "minRuntimeApi": "1.0.0", "permissions": [], "optionalPermissions": [] } },
+  "ui": { "minComponentsVersion": "1.0.0", "minTokensVersion": "1.0.0", "customViews": [{ "id": "pomodoro.timer", "entry": "ui/timer.html", "width": 348, "height": 430, "minWidth": 300, "minHeight": 360 }] },
+  "locales": { "default": "en", "supported": ["en", "zh-CN", "zh-TW"] },
+  "permissions": { "required": [], "optional": [] },
+  "network": { "domains": [] },
+  "oauth": { "redirectUris": [] },
+  "dataTypes": [],
+  "commands": [],
+  "contributes": { "items": [{ "id": "pomodoro.toolbar", "kind": "view", "surface": "app/toolbar", "handler": "pomodoro.timer", "viewId": "pomodoro.timer", "icon": "timer", "titleKey": "pomodoro.open", "group": "productivity", "order": 60 }] },
+  "activationEvents": []
+}
